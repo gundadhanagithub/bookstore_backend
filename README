@@ -1,0 +1,7 @@
+Run migrate 
+
+python manage.py migrate
+python manage.py createsuperuser --username admin --email admin@example.com
+
+python manage.py makemigrations <APP_NAME>
+python manage.py migrate <APP_NAME>
