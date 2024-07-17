@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-%t5c6_wqf@9c213wn5f-17e3e$h27yd9-lx0^71^w80rf+=286
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["10.0.138.32", "bookstore-alb-1486648234.us-east-2.elb.amazonaws.com"]
 
 # Application definition
 
@@ -151,7 +151,10 @@ LOGGING = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    "*"
+    "http://bookstore.frontend.s3-website.us-east-2.amazonaws.com",
+    "http://bookstore-alb-1486648234.us-east-2.elb.amazonaws.com",
+    "http://10.0.138.32",
+    "http://localhost:3000"
 ]
 
 CORS_ALLOW_CREDENTIALS = True
